@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Predictor - Welcome</title>
+    <link rel="icon" href="{% static 'img/site-pic.ico'%}" type = "image/icon type" />
+    <link rel="stylesheet" href="{% static 'css/welcome_styles.css' %}" />
+</head>
+<body>
+    <div class="main-card">
+        <header>
+            <h1 class="title">Weather Predictor</h1>
+            <p class="subtitle">5-hour weather forecasting</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Enter Your Location</h2>
+            <form method="POST" action="{% url 'weather_view' %}">
+                {% csrf_token %}
+                <label for="city-input">City Name</label>
+                <div class="input-container">
+                    <input
+                        type="text"
+                        id="city-input"
+                        name="city"
+                        placeholder="e.g.Kathmandu, Nepal"
+                        required
+                    />
+                </div>
+                <button type="submit" class="predict-button">
+                    Get Weather Predictions
+                    <span class="arrow">→</span>
+                </button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

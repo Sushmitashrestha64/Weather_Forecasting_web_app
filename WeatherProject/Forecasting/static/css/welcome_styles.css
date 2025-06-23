@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #8cc6ff;
+    background: linear-gradient(135deg, #6fb2f6 0%, #79b1f6 100%); 
+    color: white;
+}
+
+.main-card {
+    width: 90%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* For Safari */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+header .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+}
+
+.form-section h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-section p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.form-section label {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 15px 15px 15px 50px; 
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-container::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.7;
+}
+
+
+.input-container input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-container input:focus {
+    border-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.predict-button {
+    width: 100%;
+    padding: 15px;
+    background: #be75de;
+    background: linear-gradient(90deg, #c78edf, #9b59b6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.predict-button:hover {
+    background: linear-gradient(90deg, #9b59b6, #8e44ad);
+    transform: translateY(-2px);
+}
+
+.predict-button .arrow {
+    margin-left: 10px;
+    font-size: 24px;
+    line-height: 1;
+}
+
